@@ -48,10 +48,23 @@ const statusMessage = document.getElementById('feedback-status');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const formData = new FormData(form);
+  const feedbackEntry = {
+    name: formData.get('name')?.toString().trim() || '',
+    email: formData.get('email')?.toString().trim() || '',
+    message: formData.get('message')?.toString().trim() || '',
+    timestamp: new Date().toISOString(),
+  };
 
-  statusMessage.textContent = 'Thanks! Your feedback has been received.';
-  statusMessage.style.color = '#10b981';
-  form.reset();
+  const saved = typeof saveFeedbackEntry === 'function' && saveFeedbackEntry(feedbackEntry);
+
+  if (saved) {
+    statusMessage.textContent = 'Thanks! Your feedback has been received and stored.';
+    statusMessage.style.color = '#10b981';
+    form.reset();
+  } else {
+    statusMessage.textContent = 'Sorry, we could not store your feedback. Please try again.';
+    statusMessage.style.color = '#f97316';
+  }
 });
 
 // Fade-in animation on scroll

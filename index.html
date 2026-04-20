@@ -3,92 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Mohammed Shahad — Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Redirect to cv.html immediately
+    window.location.href = 'cv.html';
+  </script>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <p class="eyebrow">Hello, I’m</p>
-      <h1>Jane Doe</h1>
-      <p class="subtitle">A web developer who builds clean, responsive websites and digital experiences.</p>
-      <div class="buttons">
-        <a class="btn btn-primary" href="cv.html">View My CV</a>
-        <a class="btn btn-secondary" href="#contact">Contact Me</a>
-      </div>
+  <!-- Minimal loading while redirecting -->
+  <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(135deg, #0f0f23, #1a1a2e); color: #dbeafe; font-family: 'Inter', sans-serif;">
+    <div style="text-align: center;">
+      <div style="width: 40px; height: 40px; border: 3px solid rgba(96, 165, 250, 0.3); border-top: 3px solid #60a5fa; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
+      <p>Loading portfolio...</p>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <section id="about" class="section card">
-      <h2>About Me</h2>
-      <p>I’m a front-end developer focused on building modern, accessible websites with a strong eye for design and usability.</p>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Responsive design</li>
-        <li>UI/UX foundations</li>
-        <li>Performance-first workflows</li>
-      </ul>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>Portfolio Website</h3>
-          <p>A responsive portfolio site with smooth interactions and a polished visual layout.</p>
-          <span class="tag">HTML / CSS / JS</span>
-        </article>
-        <article class="project-card">
-          <h3>Blog Platform</h3>
-          <p>A clean blog frontend with mobile-first design and fast loading times.</p>
-          <span class="tag">React / CSS</span>
-        </article>
-        <article class="project-card">
-          <h3>Landing Page</h3>
-          <p>A modern landing page optimized for conversions and product storytelling.</p>
-          <span class="tag">HTML / CSS / Figma</span>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="section card">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <span>Responsive Layouts</span>
-        <span>Accessibility</span>
-        <span>Interaction Design</span>
-        <span>Cross-Browser</span>
-        <span>SEO Basics</span>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-card">
-      <h2>Contact</h2>
-      <p>Ready to work together or want to learn more? Send a message.</p>
-      <form id="contact-form">
-        <label>
-          Name
-          <input type="text" name="name" placeholder="Your name" required />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" placeholder="you@example.com" required />
-        </label>
-        <label>
-          Message
-          <textarea name="message" rows="4" placeholder="Tell me about your project" required></textarea>
-        </label>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
-      <p id="status-message" class="status-message"></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Jane Doe — Built with HTML, CSS, and JavaScript.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </body>
 </html>
