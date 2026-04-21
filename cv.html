@@ -7,6 +7,28 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">MOHAMMED SHAHAD</div>
+      <button class="navbar-toggle" id="navbarToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#summary" class="nav-link">Summary</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#languages" class="nav-link">Languages</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>        
+        <li><a href="#feedback" class="nav-link">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <!-- Modern Loading Screen -->
   <div id="pageLoader" class="loader-container">
     <!-- Background animated elements -->
@@ -122,17 +144,17 @@
   </header>
 
   <main>
-    <section class="section card">
+    <section id="summary" class="section card">
       <h2>Professional Summary</h2>
       <p>Passionate Web Developer with skills in front-end and back-end development, object-oriented programming, and data analytics. Currently pursuing B.Tech in Computer Science Engineering at Yenepoya (2024–Present) with a specialization in Data Science. Focused on building responsive, user-friendly applications and continuously improving through hands-on projects.</p>
     </section>
 
-    <section class="section card experience-section">
+    <section id="experience" class="section card experience-section">
       <h2>Experience</h2>
       <p class="muted">Coming soon...</p>
     </section>
 
-    <section class="section card">
+    <section id="education" class="section card">
       <h2>Education</h2>
       <div class="education-item">
         <div class="education-header">
@@ -144,7 +166,7 @@
       </div>
     </section>
 
-    <section class="section card">
+    <section id="skills" class="section card">
       <h2>Skills</h2>
       <div class="skills-container">
         <div class="skill-category">
@@ -227,8 +249,7 @@
       </div>
     </section>
 
-    <section class="section card">
-      <h2>Languages</h2>
+    <section id="languages" class="section card">      <h2>Languages</h2>
       <div class="languages-grid">
         <div class="language-card">
           <div class="language-header">
@@ -349,7 +370,7 @@
       </div>
     </section>
 
-    <section class="section card feedback-section">
+    <section id="feedback" class="section card feedback-section">
       <h2>Feedback</h2>
       <p>We'd love to hear your thoughts! Please leave your feedback below.</p>
       <form id="feedback-form">
@@ -379,3 +400,12 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
